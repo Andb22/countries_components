@@ -1,19 +1,21 @@
 <template lang="html">
+<div>
   <!-- <li v-on:click="handleClick">{{country.name}}</li> -->
-  <li v-on:click="handleClick">{{country.name}}</li>
-
+  <countryListOption v-on:change="handleChange">{{country}}</countryListOption>
+</div>
 </template>
 
 <script>
 
-import {eventBus} from '../main.js'
+import {eventBus} from '../main.js';
 
 export default {
-  name: 'countryListItem',
+  name: 'countryListOption',// countryListItem
   props: ['country'],
   methods: {
-    handleClick(){
+    handleChange(){ //handleClick
       eventBus.$emit('country-selected', this.country)
+      console.log('this country is waow');
     }
   }
 }

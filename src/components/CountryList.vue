@@ -1,12 +1,12 @@
 <template lang="html">
   <div>
-  <ul>
-    <countryListItem v-for="(country, index) in allCountries" :country="country" :key="index">{{country.name}}</countryListItem>
-  </ul>
   <select>
     <option disabled value="">Select a Country</option>
     <option v-for="(country, index) in allCountries" :value="country" :key="index">{{country.name}}></option>
   </select>
+  <!-- <ul>
+    <countryListItem v-for="(country, index) in allCountries" :country="country" :key="index">{{country.name}}</countryListItem>
+  </ul> -->
     </div>
 
 </template>
@@ -22,7 +22,7 @@ export default {
   name: 'country-list',
   props: ['allCountries'],
   components: {
-    "countryListItem": CountryComponent
+    "countryListOption": CountryComponent
   }
 
 
