@@ -1,18 +1,22 @@
 <template lang="html">
   <div>
   <ul>
-    <li v-for="(country, index) in allCountries" :country="country" :key="index">{{country.name}}</li>
+    <countryListItem v-for="(country, index) in allCountries" :country="country" :key="index">{{country.name}}</countryListItem>
   </ul>
     </div>
 
 </template>
 
 <script>
+import CountryComponent from './CountryComponent.vue'
 
 
 export default {
   name: 'country-list',
   props: ['allCountries'],
+  components: {
+    "countryListItem": CountryComponent
+  }
 
 
 }
