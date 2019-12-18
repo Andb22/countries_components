@@ -1,8 +1,8 @@
 <template lang="html">
   <div>
-  <!-- <ul>
+  <ul>
     <countryListItem v-for="(country, index) in allCountries" :country="country" :key="index">{{country.name}}</countryListItem>
-  </ul> -->
+  </ul>
   <select>
     <option disabled value="">Select a Country</option>
     <option v-for="(country, index) in allCountries" :value="country" :key="index">{{country.name}}></option>
@@ -13,6 +13,9 @@
 
 <script>
 import CountryComponent from './CountryComponent.vue'
+// on change event in option above.
+// triggers a function here
+// take the whole country object and pass it to emit event
 
 
 export default {

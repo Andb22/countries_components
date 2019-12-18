@@ -1,4 +1,5 @@
 <template lang="html">
+  <!-- <li v-on:click="handleClick">{{country.name}}</li> -->
   <li v-on:click="handleClick">{{country.name}}</li>
 
 </template>
