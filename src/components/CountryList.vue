@@ -1,8 +1,12 @@
 <template lang="html">
   <div>
-  <ul>
+  <!-- <ul>
     <countryListItem v-for="(country, index) in allCountries" :country="country" :key="index">{{country.name}}</countryListItem>
-  </ul>
+  </ul> -->
+  <select>
+    <option disabled value="">Select a Country</option>
+    <option v-for="(country, index) in allCountries" :value="country" :key="index">{{country.name}}></option>
+  </select>
     </div>
 
 </template>
